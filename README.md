@@ -1,6 +1,6 @@
-# php-curl-class
+# Curl
 
-PHP Curl Class is an object-oriented wrapper of the PHP cURL extension.
+Curl is an object-oriented wrapper of the PHP cURL extension.
 
 ### Quick Start and Examples
 
