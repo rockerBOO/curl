@@ -1,11 +1,9 @@
 <?php
 
-// require_once __DIR__. '/../vendor/autoload.php';
-
 use rockerboo\curl\Curl;
 
 class Test {
-    const TEST_URL = 'https://127.0.0.1/php-curl-class/tests/server.php';
+    const TEST_URL = 'https://127.0.0.1/curl/tests/server.php';
     const ERROR_URL = 'https://1.2.3.4/';
 
     function __construct() {

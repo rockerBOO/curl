@@ -1,13 +1,9 @@
 <?php
 
-
-
-// Usage: phpunit --verbose run.php
-
 use rockerboo\curl\Curl;
 
+// Get Test class, temporary image creation functions
 require __DIR__. '/../helper.inc.php';
-
 
 class CurlTest extends PHPUnit_Framework_TestCase {
     public function testExtensionLoaded() {
