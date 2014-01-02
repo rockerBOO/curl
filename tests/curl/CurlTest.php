@@ -1,9 +1,9 @@
 <?php
-// Usage: phpunit --verbose run.php
 
-require '../Curl.class.php';
-require 'helper.inc.php';
+use rockerboo\curl\Curl;
 
+// Get Test class, temporary image creation functions
+require __DIR__. '/../helper.inc.php';
 
 class CurlTest extends PHPUnit_Framework_TestCase {
     public function testExtensionLoaded() {
@@ -459,4 +459,16 @@ class CurlTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($error_called);
         $this->assertTrue($complete_called);
     }
+}
+
+function is_array_assoc($array) {
+    return (bool)count(array_filter(array_keys($array), 'is_string'));
+}
+
+function is_array_multidim($array) {
+    if (!is_array($array)) {
+        return FALSE;
+    }
+
+    return !(count($array) === count($array, COUNT_RECURSIVE));
 }

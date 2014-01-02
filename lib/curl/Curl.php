@@ -1,4 +1,7 @@
 <?php
+
+namespace rockerboo\curl;
+
 class Curl {
     const USER_AGENT = 'PHP-Curl-Class/1.0 (+https://github.com/php-curl-class/php-curl-class)';
 
@@ -34,7 +37,7 @@ class Curl {
 
     public function __construct() {
         if (!extension_loaded('curl')) {
-            throw new ErrorException('cURL library is not loaded');
+            throw new \ErrorException('cURL library is not loaded');
         }
 
         $this->curl = curl_init();
@@ -276,14 +279,3 @@ class Curl {
     }
 }
 
-function is_array_assoc($array) {
-    return (bool)count(array_filter(array_keys($array), 'is_string'));
-}
-
-function is_array_multidim($array) {
-    if (!is_array($array)) {
-        return FALSE;
-    }
-
-    return !(count($array) === count($array, COUNT_RECURSIVE));
-}
