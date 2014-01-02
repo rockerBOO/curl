@@ -1,4 +1,9 @@
 <?php
+
+// require_once __DIR__. '/../vendor/autoload.php';
+
+use rockerboo\curl\Curl;
+
 class Test {
     const TEST_URL = 'https://127.0.0.1/php-curl-class/tests/server.php';
     const ERROR_URL = 'https://1.2.3.4/';
@@ -16,6 +21,7 @@ class Test {
         return $this->curl->response;
     }
 }
+
 
 function create_png() {
     // PNG image data, 1 x 1, 1-bit colormap, non-interlaced
