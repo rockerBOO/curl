@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+// require_once __DIR__. '/../vendor/autoload.php';
+
+>>>>>>> d47da75... Curl with composer
 use rockerboo\curl\Curl;
 
 class Test {
