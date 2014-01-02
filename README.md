@@ -2,16 +2,42 @@
 
 Curl is an object-oriented wrapper of the PHP cURL extension.
 
+### Install
+
+Add the following lines to `composer.json`
+
+```
+{
+    "require": {
+        "rockerboo/curl": "dev-master",
+    }
+}
+```
+
+Update composer
+
+```
+composer update
+```
+
+Require the composer autoloader, if you haven't already
+
+```
+require 'vendor/autoload.php';
+```
+
 ### Quick Start and Examples
 
 ```php
-require 'Curl.class.php';
+use rockerboo\curl\Curl;
 
 $curl = new Curl();
 $curl->get('http://www.example.com/');
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->get('http://www.example.com/search', array(
     'q' => 'keyword',
@@ -19,6 +45,8 @@ $curl->get('http://www.example.com/search', array(
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->post('http://www.example.com/login/', array(
     'username' => 'myusername',
@@ -27,6 +55,8 @@ $curl->post('http://www.example.com/login/', array(
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->setBasicAuthentication('username', 'password');
 $curl->setUserAgent('');
@@ -47,6 +77,8 @@ var_dump($curl->response_headers);
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->setOpt(CURLOPT_RETURNTRANSFER, TRUE);
 $curl->setOpt(CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -54,6 +86,8 @@ $curl->get('https://encrypted.example.com/');
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->put('http://api.example.com/user/', array(
     'first_name' => 'Zach',
@@ -62,6 +96,8 @@ $curl->put('http://api.example.com/user/', array(
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->patch('http://api.example.com/profile/', array(
     'image' => '@path/to/file.jpg',
@@ -69,6 +105,8 @@ $curl->patch('http://api.example.com/profile/', array(
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 $curl = new Curl();
 $curl->delete('http://api.example.com/user/', array(
     'id' => '1234',
@@ -86,6 +124,8 @@ curl_close($curl->curl);
 ```
 
 ```php
+use rockerboo\curl\Curl;
+
 // Requests in parallel with callback functions.
 $curl = new Curl();
 $curl->setOpt(CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1');
