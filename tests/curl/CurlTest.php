@@ -1,17 +1,6 @@
 <?php
-<<<<<<< HEAD:tests/curl/CurlTest.php
 
 use rockerboo\curl\Curl;
-=======
-
-
-
-// Usage: phpunit --verbose run.php
-
-use rockerboo\curl\Curl;
-
-require __DIR__. '/../helper.inc.php';
->>>>>>> d47da75... Curl with composer:tests/curl/CurlTest.php
 
 // Get Test class, temporary image creation functions
 require __DIR__. '/../helper.inc.php';
